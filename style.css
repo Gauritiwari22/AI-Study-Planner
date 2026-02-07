@@ -1,0 +1,300 @@
+:root {
+    --bg: #0b0d12;
+    --card: #121520;
+    --text: #e6e6e9;
+    --muted: #9aa0a6;
+    --accent: #7c9cff;
+    --accent2: #ff9cf5;
+    --border: #23283a;
+    --hl: #ff6b6b;
+    --ml: #f4b942;
+    --ll: #4cd4a0;
+    --buf: #7e7e7e;
+    --rev: #6aa3ff;
+    --prac: #b57cff;
+    --learn: #4cd4a0
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #0b0d12, #0f1320);
+    color: var(--text);
+    font-family: Inter, system-ui, Segoe UI, Arial, sans-serif
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px
+}
+
+.header h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px
+}
+
+.header p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.inputs,
+.outputs {
+    display: grid;
+    gap: 16px
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--muted)
+}
+
+input,
+select,
+button {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #0d111b;
+    color: var(--text);
+    padding: 10px 12px;
+    outline: none
+}
+
+input::placeholder {
+    color: #626878
+}
+
+button {
+    cursor: pointer
+}
+
+button:hover {
+    border-color: var(--accent)
+}
+
+.secondary {
+    background: #0c1018
+}
+
+.row {
+    display: flex;
+    gap: 12px
+}
+
+.subjects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.subject-card {
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 12px
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px
+}
+
+.subject-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px
+}
+
+.chip {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #0d111b
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    grid-template-rows: 36px repeat(18, 60px);
+    gap: 8px
+}
+
+.calendar .col-head {
+    font-weight: 600;
+    color: var(--muted);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.time-cell {
+    color: var(--muted);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #0d111b
+}
+
+.slot {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.slot .title {
+    font-weight: 600
+}
+
+.slot .meta {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.legend {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px
+}
+
+.pill {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border)
+}
+
+.hl {
+    background: #2a0f13;
+    color: #ffb1b1;
+    border-color: #49161e
+}
+
+.ml {
+    background: #2a220f;
+    color: #ffe0a5;
+    border-color: #4a3e1a
+}
+
+.ll {
+    background: #0f2a1b;
+    color: #baf3da;
+    border-color: #1b4a31
+}
+
+.buf {
+    background: #1d1d1d;
+    color: #bdbdbd;
+    border-color: #2f2f2f
+}
+
+.rev {
+    background: #0f1c2a;
+    color: #cbe3ff;
+    border-color: #153252
+}
+
+.prac {
+    background: #1a0f2a;
+    color: #e2c7ff;
+    border-color: #2e1a4a
+}
+
+.learn {
+    background: #0f2a1b;
+    color: #baf3da;
+    border-color: #1b4a31
+}
+
+#breakdown,
+#priorities,
+#next-steps,
+#adaptation,
+#summary {
+    display: grid;
+    gap: 10px
+}
+
+.bar {
+    height: 10px;
+    border-radius: 999px;
+    background: #0d111b;
+    border: 1px solid var(--border);
+    overflow: hidden
+}
+
+.bar>span {
+    display: block;
+    height: 100%
+}
+
+.justify {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.adapt-row {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: 8px;
+    align-items: center
+}
+
+.adapt-row input {
+    width: 100%
+}
+
+@media (max-width:900px) {
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr
+    }
+
+    .calendar {
+        grid-template-columns: 80px repeat(7, 1fr)
+    }
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Study Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1>AI-Powered Study Planner</h1>
+    <p>Adaptive planning for engineering students</p>
+  </header>
+  <section class="inputs">
+    <div class="card">
+      <h2>Student Details</h2>
+      <div class="grid-2">
+        <label>Name<input id="student-name" type="text"></label>
+        <label>College<input id="student-college" type="text"></label>
+        <label>Branch<input id="student-branch" type="text"></label>
+        <label>Graduation Year<input id="student-gradyear" type="number" min="2024" max="2035"></label>
+        <label>Email<input id="student-email" type="email"></label>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Subjects & Credits</h2>
+      <div id="subjects-list" class="subjects-list"></div>
+      <div class="row">
+        <input id="new-subject-name" type="text" placeholder="Subject name">
+        <input id="new-subject-credits" type="number" min="1" max="6" placeholder="Credits">
+        <button id="add-subject">Add Subject +</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Study Time Availability</h2>
+      <div class="grid-3">
+        <label>Weekdays (hrs/day)<input id="weekdays-hours" type="number" min="1" max="12"></label>
+        <label>Weekends (hrs/day)<input id="weekends-hours" type="number" min="1" max="16"></label>
+        <label>Preferred Study Time
+          <select id="preferred-time">
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="night">Night</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Target Completion Date</h2>
+      <input id="target-date" type="date">
+    </div>
+    <div class="actions">
+      <button id="generate-plan">Generate Study Plan</button>
+      <button id="reset-form" class="secondary">Reset</button>
+    </div>
+  </section>
+  <section class="outputs">
+    <div class="card">
+      <h2>Visual Schedule</h2>
+      <div id="calendar" class="calendar"></div>
+      <div class="legend">
+        <span class="pill hl">High Load</span>
+        <span class="pill ml">Medium Load</span>
+        <span class="pill ll">Low Load</span>
+        <span class="pill buf">Buffer</span>
+        <span class="pill rev">Revision</span>
+        <span class="pill prac">Practice</span>
+        <span class="pill learn">Learning</span>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Subject-Wise Focus Breakdown</h2>
+      <div id="breakdown"></div>
+    </div>
+    <div class="card">
+      <h2>Smart Priorities</h2>
+      <div id="priorities"></div>
+    </div>
+    <div class="card">
+      <h2>Actionable Next Steps</h2>
+      <div id="next-steps"></div>
+    </div>
+    <div class="card">
+      <h2>Progress & Adaptation</h2>
+      <div id="adaptation"></div>
+    </div>
+    <div class="card">
+      <h2>Outcome Summary</h2>
+      <div id="summary"></div>
+    </div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
