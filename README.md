@@ -1,4 +1,4 @@
-#  AI-Powered Adaptive Study Planner
+#  AI-Powered Adaptive Study Planner (HACKATHON PROJECT)
 
 A smart, prototype-level scheduling application designed to help engineering students manage high cognitive loads, balance subject credits, and adapt to changing confidence levels in real-time.
 
